@@ -19,6 +19,13 @@ class PostForm extends Component {
     submitHandler = (e) => {
         e.preventDefault()
         console.log(this.state)
+        axios.post('https://jsonplaceholder.typicode.com/posts')
+        .then(response => {
+            console.log(response)
+        })
+        .catch(error => {
+            console.log(error)
+        })
     }
 
   render() {
